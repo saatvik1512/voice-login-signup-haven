@@ -25,13 +25,13 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#8B4513",
-          hover: "#723A0F",
+          DEFAULT: "#FF9666",
+          hover: "#FF7A40",
           foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "#FDE1D3",
-          foreground: "#8B4513",
+          DEFAULT: "#221F26",
+          foreground: "#E8D5C4",
         },
       },
       keyframes: {
@@ -43,10 +43,15 @@ export default {
           "0%": { opacity: "0", transform: "translateY(10px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
+        glow: {
+          "0%, 100%": { filter: "brightness(1)" },
+          "50%": { filter: "brightness(1.2) drop-shadow(0 0 15px #FF9666)" },
+        },
       },
       animation: {
         "pulse-ring": "pulse-ring 1.25s cubic-bezier(0.24, 0, 0.38, 1) infinite",
         "fade-in": "fade-in 0.5s ease-out",
+        glow: "glow 2s ease-in-out infinite",
       },
     },
   },

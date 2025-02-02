@@ -38,11 +38,11 @@ const VoiceAuth = ({ mode }: VoiceAuthProps) => {
   };
 
   return (
-    <div className="flex flex-col items-center space-y-6 animate-fade-in">
-      <p className="text-primary/80 text-sm">
+    <div className="flex flex-col items-center space-y-8 animate-fade-in">
+      <RecordButton isRecording={isRecording} onClick={handleRecord} />
+      <p className="text-[#9CA3AF] text-base">
         {mode === "login" ? "Login with your voice" : "Register with your voice"}
       </p>
-      <RecordButton isRecording={isRecording} onClick={handleRecord} />
     </div>
   );
 };

@@ -10,14 +10,14 @@ const RecordButton = ({ isRecording, onClick }: RecordButtonProps) => {
   return (
     <button
       onClick={onClick}
-      className={`relative w-20 h-20 rounded-full flex items-center justify-center transition-all duration-300 ${
-        isRecording ? "bg-primary/80" : "bg-primary"
-      } hover:bg-primary-hover`}
+      className={`relative w-24 h-24 rounded-full flex items-center justify-center transition-all duration-300
+        ${isRecording ? "bg-primary/80" : "bg-primary"} 
+        hover:bg-primary-hover animate-glow`}
     >
       {isRecording && (
-        <span className="absolute w-full h-full rounded-full animate-pulse-ring bg-primary/50" />
+        <span className="absolute w-full h-full rounded-full animate-pulse-ring bg-primary/30" />
       )}
-      <Mic className={`w-8 h-8 text-white ${isRecording ? "animate-pulse" : ""}`} />
+      <Mic className={`w-10 h-10 text-white ${isRecording ? "animate-pulse" : ""}`} />
     </button>
   );
 };

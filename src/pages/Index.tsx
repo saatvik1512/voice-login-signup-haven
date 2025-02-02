@@ -6,29 +6,32 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-secondary">
-      <div className="bg-white/10 backdrop-blur-sm rounded-3xl shadow-lg p-8 w-full max-w-md space-y-6">
+      <div className="bg-white/5 backdrop-blur-md rounded-[32px] p-12 w-full max-w-md space-y-12">
         <div className="text-center space-y-2">
-          <h1 className="text-3xl font-semibold text-primary">Height Detection App</h1>
-          <p className="text-primary/80">Authenticate with your voice</p>
+          <h1 className="text-[40px] font-semibold">
+            <span className="text-[#E8D5C4]">Height Detection</span>{" "}
+            <span className="text-primary">App</span>
+          </h1>
+          <p className="text-[#9CA3AF] text-lg">Authenticate with your voice</p>
         </div>
         
-        <div className="flex justify-center gap-4">
+        <div className="flex justify-center gap-6">
           <button
             onClick={() => setMode("login")}
-            className={`px-6 py-2 rounded-lg text-sm font-medium transition-all ${
+            className={`px-8 py-3 rounded-2xl text-base font-medium transition-all duration-300 ${
               mode === "login"
-                ? "bg-primary text-white"
-                : "text-primary hover:bg-primary/10"
+                ? "bg-primary text-white animate-glow"
+                : "text-[#9CA3AF] hover:text-white"
             }`}
           >
             Login
           </button>
           <button
             onClick={() => setMode("signup")}
-            className={`px-6 py-2 rounded-lg text-sm font-medium transition-all ${
+            className={`px-8 py-3 rounded-2xl text-base font-medium transition-all duration-300 ${
               mode === "signup"
-                ? "bg-primary text-white"
-                : "text-primary hover:bg-primary/10"
+                ? "bg-primary text-white animate-glow"
+                : "text-[#9CA3AF] hover:text-white"
             }`}
           >
             Sign Up
