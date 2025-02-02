@@ -5,32 +5,36 @@ const Index = () => {
   const [mode, setMode] = useState<"login" | "signup">("login");
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-secondary to-white p-4">
-      <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-md">
-        <div className="flex justify-center mb-8">
-          <div className="inline-flex rounded-lg bg-secondary p-1">
-            <button
-              onClick={() => setMode("login")}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
-                mode === "login"
-                  ? "bg-primary text-white"
-                  : "text-gray-600 hover:text-gray-800"
-              }`}
-            >
-              Login
-            </button>
-            <button
-              onClick={() => setMode("signup")}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
-                mode === "signup"
-                  ? "bg-primary text-white"
-                  : "text-gray-600 hover:text-gray-800"
-              }`}
-            >
-              Sign Up
-            </button>
-          </div>
+    <div className="min-h-screen flex items-center justify-center bg-secondary">
+      <div className="bg-white/10 backdrop-blur-sm rounded-3xl shadow-lg p-8 w-full max-w-md space-y-6">
+        <div className="text-center space-y-2">
+          <h1 className="text-3xl font-semibold text-primary">Height Detection App</h1>
+          <p className="text-primary/80">Authenticate with your voice</p>
         </div>
+        
+        <div className="flex justify-center gap-4">
+          <button
+            onClick={() => setMode("login")}
+            className={`px-6 py-2 rounded-lg text-sm font-medium transition-all ${
+              mode === "login"
+                ? "bg-primary text-white"
+                : "text-primary hover:bg-primary/10"
+            }`}
+          >
+            Login
+          </button>
+          <button
+            onClick={() => setMode("signup")}
+            className={`px-6 py-2 rounded-lg text-sm font-medium transition-all ${
+              mode === "signup"
+                ? "bg-primary text-white"
+                : "text-primary hover:bg-primary/10"
+            }`}
+          >
+            Sign Up
+          </button>
+        </div>
+        
         <VoiceAuth mode={mode} />
       </div>
     </div>
